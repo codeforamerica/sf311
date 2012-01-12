@@ -1,0 +1,79 @@
+@import "bootstrap/mixins.less";
+
+@blue: #1b84b4;
+
+.custom-highlight{
+    background: @blue;
+    color: #fff;
+    text-shadow: -1px 1px 1px darken(@blue, 15%);
+}
+
+/* Apply custom highlight */
+::-moz-selection{ .custom-highlight; }
+::selection { .custom-highlight; }
+
+textarea{
+    resize: vertical;
+}
+
+body{
+}
+
+header{
+    .topbar .fill{
+        #gradient > .vertical(@blue, darken(@blue, 8%));
+        a{
+            color: #fff;
+        }
+        margin: 0;
+        padding: 5px;
+    }
+}
+
+#main{
+    #gradient > .vertical(#222, #333);
+    margin-top: 40px;
+    padding-top: 20px;
+    text-shadow: -1px 1px 1px rgba(0, 0, 0, .25);
+}
+
+.info{
+    background: url(/static/img/twitter.png) no-repeat 40% bottom;
+    height: 525px;
+    margin-top: 50px;
+    h1, p{
+        color: #fff;
+    }
+    h1{
+        margin-bottom: 25px;
+    }
+    p{
+        margin-top: 15px;
+        width: 85%;
+    }
+    .title{
+        font-size: 34px;
+        font-weight: 200;
+        line-height: 44px;
+        margin-top: 50px;
+        .btn{
+            .gradientBar(@blue, darken(@blue, 5%));
+            color: #f5f5f5;
+            font-weight: 400;
+            margin-top: 5px;
+            margin-left: 20px;
+            vertical-align: text-top;
+        }
+    }
+}
+
+.iphone{
+    background: url(/static/img/iphone.png) no-repeat center center;
+    height: 640px;
+}
+
+footer{
+    #gradient > .vertical(#f5f5f5, #fff);
+    height: 300px;
+    margin-top: 0;
+}
