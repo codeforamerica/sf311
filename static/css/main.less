@@ -1,6 +1,6 @@
 @import "bootstrap/mixins.less";
 
-@blue: #1b84b4;
+@blue: #0c8fc3;
 
 .custom-highlight{
     background: @blue;
@@ -16,17 +16,18 @@ textarea{
     resize: vertical;
 }
 
-body{
-}
-
 header{
-    .topbar .fill{
-        #gradient > .vertical(@blue, darken(@blue, 8%));
-        a{
-            color: #fff;
+    .topbar{
+        position: absolute;
+        z-index: 100;
+        .fill{
+            #gradient > .vertical(@blue, darken(@blue, 10%));
+            a{
+                color: #fff;
+            }
+            margin: 0;
+            padding: 10px;
         }
-        margin: 0;
-        padding: 5px;
     }
 }
 
@@ -54,7 +55,7 @@ header{
         font-size: 34px;
         font-weight: 200;
         line-height: 44px;
-        margin-top: 50px;
+        margin-top: 25px;
         .btn{
             .gradientBar(@blue, darken(@blue, 5%));
             color: #f5f5f5;
@@ -67,8 +68,12 @@ header{
 }
 
 .iphone{
-    background: url(/static/img/iphone.png) no-repeat center center;
-    height: 640px;
+    background: url(/static/img/iphone.png) no-repeat center top;
+    height: 625px;
+    margin-top: -25px;
+    position: relative;
+    width: 100%;
+    z-index: 5000;
 }
 
 .twitter-follow-button{
