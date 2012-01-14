@@ -20,27 +20,37 @@ header{
     .topbar{
         position: absolute;
         z-index: 100;
+        .brand{
+            background: url(/static/img/sf.png) no-repeat 16px center;
+            height: 35px;
+            text-indent: -999em;
+            width: 150px;
+            &:hover{
+                background-color: transparent;
+            }
+        }
         .fill{
             #gradient > .vertical(@blue, darken(@blue, 10%));
             a{
                 color: #fff;
             }
             margin: 0;
-            padding: 10px;
+            padding: 5px;
         }
     }
 }
 
+
 #main{
     #gradient > .vertical(#222, #333);
     margin-top: 40px;
-    padding-top: 20px;
+    padding-top: 10px;
     text-shadow: -1px 1px 1px rgba(0, 0, 0, .25);
 }
 
 .info{
     height: 475px;
-    padding-top: 50px;
+    padding-top: 40px;
     h1, p{
         color: #fff;
     }
@@ -69,7 +79,7 @@ header{
 
 .iphone{
     background: url(/static/img/iphone.png) no-repeat center top;
-    height: 625px;
+    height: 615px;
     margin-top: -25px;
     position: relative;
     width: 100%;
