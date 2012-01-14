@@ -8,6 +8,19 @@
     text-shadow: -1px 1px 1px darken(@blue, 15%);
 }
 
+.scale(@scale) {
+     -webkit-transform: scale(@scale);
+     -webkit-transform-origin: 0 0;
+        -moz-transform: scale(@scale);
+        -moz-transform-origin: 0 0;
+         -ms-transform: scale(@scale);
+         -ms-transform-origin: 0 0;
+          -o-transform: scale(@scale);
+          -o-transform-origin: 0 0;
+             transform: scale(@scale);
+             transform-origin: 0 0;
+}
+
 /* Apply custom highlight */
 ::-moz-selection{ .custom-highlight; }
 ::selection { .custom-highlight; }
@@ -79,11 +92,34 @@ header{
 
 .iphone{
     background: url(/static/img/iphone.png) no-repeat center top;
-    height: 615px;
+    height: 630px;
     margin-top: -25px;
     position: relative;
     width: 100%;
     z-index: 5000;
+}
+
+.app{
+    background: #ccc;
+    height: 357px;
+    margin-left: 111px;
+    overflow-y: scroll;
+    position: absolute;
+    top: 100px;
+    width: 239px;
+    .twitter-bar{
+        background: @blue url(/static/img/twitter_bar.png) no-repeat center center;
+        border-bottom: 1px solid darken(@blue, 8%);
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    .tweets{
+        .scale(.90);
+        margin-left: 6px;
+    }
+    blockquote{
+        visibility: hidden;
+    }
 }
 
 .twitter-follow-button{
