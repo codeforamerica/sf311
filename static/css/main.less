@@ -29,6 +29,13 @@ textarea{
     resize: vertical;
 }
 
+a{
+    color: lighten(@blue, 5%);
+    &:hover{
+        color: @blue;
+    }
+}
+
 header{
     .topbar{
         position: absolute;
@@ -131,7 +138,6 @@ a.twitter-follow-button{
 
 footer{
     #gradient > .vertical(#f5f5f5, #fff);
-    height: 300px;
     margin-top: 0;
     .content{
         .span7{
